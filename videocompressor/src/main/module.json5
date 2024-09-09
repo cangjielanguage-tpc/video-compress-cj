@@ -1,0 +1,9 @@
+{
+  "module": {
+    "name": "videocompressor",
+    "type": "har",
+    "deviceTypes": [
+      "default"
+    ]
+  }
+}

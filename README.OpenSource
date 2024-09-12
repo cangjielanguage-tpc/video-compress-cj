@@ -1,0 +1,20 @@
+[
+    {
+        "Name": "VideoCompressor",
+        "License": "Apache-2.0 license",
+        "License File": "LICENSE",
+        "Version Number": "master",
+        "Owner": "fishwjy Vincent",
+        "Upstream URL": "https://github.com/fishwjy/VideoCompressor",
+        "Description": "A High-performance video compressor for Android using Hardware decoding and encoding API(MediaCodec)."
+    },
+    {
+       "Name": "third_party_bounds_checking_function",
+       "License": "licenses/LICENSE-MulanPSL-2.0",
+       "License File": "LICENSE",
+       "Version Number": "OpenHarmony-v4.0-Beta1",
+       "Owner" : "xiafeng@huawei.com",
+       "Upstream URL": "https://gitee.com/openharmony/third_party_bounds_checking_function",
+       "Description": "Third-party open-source software bounds_checking_function | 三方开源软件bounds_checking_function"
+    }
+]

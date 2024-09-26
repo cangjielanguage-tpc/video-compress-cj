@@ -27,7 +27,7 @@ videocompress4cj是一款高性能的视频压缩三方库
 ├── doc                                       #文档目录
 │   └── feature_api.md                        #API接口文档
 ├── videocompressor                           #源码目录 
-├── videocompress_ffi                                 #C++源码目录
+├── videocompress_ffi                         #C++源码目录
 ├── entry                                     #示例目录
 └── hvigor                                    #构建工具目录
 ```
@@ -138,7 +138,7 @@ class CompresstxtHigh {
             Column {
                 Button(message).onClick {
                     let comprossor: VideoCompressor = VideoCompressor()
-                    let inputFilePath: String = "/data/storage/el1/bundle/test.txt"
+                    let inputFilePath: String = "/data/storage/el1/bundle/test.mp4"
                     let fut: Future<Unit> = spawn {
                         let result: ?CompressorResponse = comprossor.compressVideo(globalAbilityContext.getOrThrow(),
                             inputFilePath, CompressQuality.COMPRESS_QUALITY_HIGH)
@@ -169,9 +169,9 @@ class CompresstxtHigh {
 
 ## 约束与限制
 
-IDE : DevEco Studio NEXT Beta1(5.0.3.800)
+IDE : DevEco Studio NEXT Beta1(5.0.3.810)
 
-Plugins (SDK) : DevEco Studio NEXT Beta1-Cangjie Plugin(5.0.3.800)
+Plugins (SDK) : DevEco Studio NEXT Beta1-Cangjie Plugin(5.0.3.810)
 
 
 ## 开源协议

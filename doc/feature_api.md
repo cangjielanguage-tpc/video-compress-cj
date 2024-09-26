@@ -26,3 +26,14 @@ public class VideoCompressor {
 }
 ```
 
+#### 1.2 CompressQuality 视频压缩质量枚举
+
+```cangjie
+public enum CompressQuality {
+    
+    | COMPRESS_QUALITY_HIGH         //高质量压缩
+    | COMPRESS_QUALITY_MEDIUM       //中质量压缩
+    | COMPRESS_QUALITY_LOW          //低质量压缩
+    
+}
+```

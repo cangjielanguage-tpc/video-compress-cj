@@ -9,13 +9,14 @@ foreign func CompressVideo(outFd: Int32, inputFd: Int32, inputOffset: Int32, inp
     outputPath: CString): CPointer<AsyncCallbackInfoCj>
 
 public class VideoCompressor {
-    private var outPutFilePath: String = "";
+
 
     public func compressVideo(context: AbilityContext, inputFilePath: String, quality: CompressQuality): ?CompressorResponse {
+        var outPutFilePath: String = ""
         var filedir = context.filesDir
         let sjc = DateTime.now().toUnixTimeStamp().toNanoseconds()
-        this.outPutFilePath = filedir + "/" + sjc.toString() + ".mp4"
-        AppLog.error("quality:" + quality.toString() + "--videoCompressor outPutFilePath:" + this.outPutFilePath);
+        outPutFilePath = filedir + "/" + sjc.toString() + ".mp4"
+        AppLog.info("quality:" + quality.toString() + "--videoCompressor outPutFilePath:" + outPutFilePath);
         var outputFile: Option<File> = Option<File>.None
         try {
             outputFile = FileFs.open(outPutFilePath, mode: (READ_WRITE.mode | CREATE.mode))
@@ -36,7 +37,7 @@ public class VideoCompressor {
             return CompressorResponse(CompressorResponseCode.OTHER_ERROR, "open inputFile  failed ${e.toString()}",
                 outPutFilePath)
         }
-        AppLog.error("videoCompressor inputFile fd: ${inputFile.getOrThrow().fd}")
+        AppLog.info("videoCompressor inputFile fd: ${inputFile.getOrThrow().fd}")
         var inputFileStat: Option<Stat> = Option<Stat>.None
         try {
             inputFileStat = FileFs.stat(inputFile.getOrThrow().fd)
@@ -48,7 +49,7 @@ public class VideoCompressor {
         }
         if (inputFileStat.getOrThrow().size <= 0) {
             FileFs.unlink(outPutFilePath)
-            AppLog.error("videoCompressor inputFile size is 0")
+            AppLog.info("videoCompressor inputFile size is 0")
             return CompressorResponse(CompressorResponseCode.OTHER_ERROR, "videoCompressor inputFile size is 0",
                 outPutFilePath)
         }
@@ -69,7 +70,7 @@ public class VideoCompressor {
             var outputPathRes: String = outputPath.toString()
             LibC.free(outputPath)
             LibC.free(cstrRes)
-            AppLog.error("resCode=${resCode}   strRes=${strRes}  outputPathRes=${outputPathRes}")
+            AppLog.info("resCode=${resCode}   strRes=${strRes}  outputPathRes=${outputPathRes}")
             if (resCode == 0) {
                 response = CompressorResponse(CompressorResponseCode.SUCCESS, strRes, outputPathRes)
             } else {

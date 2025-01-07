@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights resvered.
+ * Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights reserved.
  */
 
 #include <bits/alltypes.h>
@@ -307,7 +307,7 @@ AsyncCallbackInfo* NativeCompressStart(VideoCompressorBean *bean)
 }
 
 
-//主要功能函数
+// 主要功能函数
 AsyncCallbackInfo* NativeCompressVideo(void *data)
 {
     AsyncCallbackInfo *asyncCallbackInfo = (AsyncCallbackInfo *)data;
@@ -338,9 +338,11 @@ AsyncCallbackInfo* NativeCompressVideo(void *data)
 }
 
 
-//入口方法
-AsyncCallbackInfo* CompressVideo(int32_t outFd,int32_t inputFd,int32_t inputOffset,int64_t inputSize,int32_t quality,char* output){
-    //这些参数组成AsyncCallbackInfo
+// 入口方法
+AsyncCallbackInfo* CompressVideo(int32_t outFd, int32_t inputFd, int32_t inputOffset, 
+    int64_t inputSize, int32_t quality, char* output) 
+{
+    // 这些参数组成AsyncCallbackInfo
     AsyncCallbackInfo *asyncCallbackInfo = new AsyncCallbackInfo();
     asyncCallbackInfo->outFd = outFd;
     asyncCallbackInfo->inputFd = inputFd;

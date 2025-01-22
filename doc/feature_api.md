@@ -1,13 +1,13 @@
 
-## videocompress4cj
+## video-compress-cj
 
 ### 介绍
-videoCompressor是一款高性能的视频压缩三方库
+video-compress-cj是一款高性能的视频压缩三方库
 
 - 支持视频压缩。
 - 支持高,中,低三种质量压缩。
 
-### 1 videocompress4cj 视频压缩库
+### 1 video-compress-cj 视频压缩库
 
 #### 1.1 VideoCompressor 视频压缩对象类
 

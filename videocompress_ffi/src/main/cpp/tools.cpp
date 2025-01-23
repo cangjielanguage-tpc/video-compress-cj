@@ -14,7 +14,7 @@
  */
 #include "tools.h"
 #include "hilog/log.h"
-#include "boundscheck/third_party_bounds_checking_function/include/securec.h"
+#include "third_party/include/securec.h"
 #define LOG_DOMAIN 0x3200 // 全局domain宏，标识业务领域
 #define LOG_TAG "videoCompressor" // 全局tag宏，标识模块日志tag
 void Tools::ClearIntQueue(std::queue<uint32_t> &q)

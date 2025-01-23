@@ -25,3 +25,5 @@ videocompressor/libs/arm64-v8a/libvideocompress.so
 videocompressor/libs/x86_64/libvideocompress.so
 videocompress_ffi/BuildProfile.ets
 videocompressor/BuildProfile.ets
+/videocompress_ffi/src/main/cpp/third_party/arm64-v8a/
+/videocompress_ffi/src/main/cpp/third_party/x86_64/

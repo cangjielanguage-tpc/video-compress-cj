@@ -11,6 +11,7 @@
 #include "hilog/log.h"
 #include "napi/native_api.h"
 #include "cjcodec.h"
+#include "third_party/include/securec.h"
 #include "video/decoder/VideoDec.h"
 #include "video/encoder/VideoEnc.h"
 #include "audio/decoder/AudioDec.h"
@@ -213,7 +214,7 @@ void SetCallBackResult(VideoCompressorBean *bean, int32_t code, std::string str)
     OH_LOG_ERROR(LOG_APP, "%{public}s", str.c_str());
     bean->asyncCallbackInfo->resultCode = code;
     char* cstr = (char*)malloc(str.length()+1);
-    strcpy(cstr, str.c_str());
+    strcpy_s(cstr, str.length()+1, str.c_str());
     bean->asyncCallbackInfo->resultStr = cstr;
 }
 
@@ -339,8 +340,8 @@ AsyncCallbackInfo* NativeCompressVideo(void *data)
 
 
 // 入口方法
-AsyncCallbackInfo* CompressVideo(int32_t outFd, int32_t inputFd, int32_t inputOffset, 
-    int64_t inputSize, int32_t quality, char* output) 
+AsyncCallbackInfo* CompressVideo(int32_t outFd, int32_t inputFd, int32_t inputOffset,
+    int64_t inputSize, int32_t quality, char* output)
 {
     // 这些参数组成AsyncCallbackInfo
     AsyncCallbackInfo *asyncCallbackInfo = new AsyncCallbackInfo();

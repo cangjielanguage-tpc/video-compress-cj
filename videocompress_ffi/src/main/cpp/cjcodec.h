@@ -23,7 +23,7 @@ struct AsyncCallbackInfo {
 extern "C" {
 #endif
 
-AsyncCallbackInfo* CompressVideo(int32_t outFd, int32_t inputFd, 
+AsyncCallbackInfo* CompressVideo(int32_t outFd, int32_t inputFd,
     int32_t inputOffset, int64_t inputSize, int32_t quality, char *outputPath);
 
 #ifdef __cplusplus

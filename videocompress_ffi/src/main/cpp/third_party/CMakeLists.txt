@@ -24,6 +24,7 @@ add_library(boundscheck
             STATIC
             ${TAGET_BOUNDSCHECK_SRC_PATH}/memcpy_s.c
             ${TAGET_BOUNDSCHECK_SRC_PATH}/memset_s.c
+            ${TAGET_BOUNDSCHECK_SRC_PATH}/strcpy_s
             ${TAGET_BOUNDSCHECK_SRC_PATH}/securecutil.c)
 
 include_directories(${TAGET_BOUNDSCHECK_SRC_PATH}

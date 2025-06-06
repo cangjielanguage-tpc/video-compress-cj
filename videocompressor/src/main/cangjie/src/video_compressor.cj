@@ -11,9 +11,9 @@ foreign func CompressVideo(outFd: Int32, inputFd: Int32, inputOffset: Int32, inp
 public class VideoCompressor {
 
 
-    public func compressVideo(context: AbilityContext, inputFilePath: String, quality: CompressQuality): ?CompressorResponse {
+    public func compressVideo(filedirOut: String, inputFilePath: String, quality: CompressQuality): ?CompressorResponse {
         var outPutFilePath: String = ""
-        var filedir = context.filesDir
+        var filedir = filedirOut
         let sjc = DateTime.now().toUnixTimeStamp().toNanoseconds()
         outPutFilePath = filedir + "/" + sjc.toString() + ".mp4"
         AppLog.info("quality:" + quality.toString() + "--videoCompressor outPutFilePath:" + outPutFilePath);

@@ -27,7 +27,7 @@ class Compressmp4High {
                     let comprossor: VideoCompressor = VideoCompressor()
                     let inputFilePath: String = "/data/storage/el1/bundle/test.mp4"
                     let fut: Future<Unit> = spawn {
-                        let result: ?CompressorResponse = comprossor.compressVideo(globalAbilityContext.getOrThrow(),
+                        let result: ?CompressorResponse = comprossor.compressVideo(globalAbilityContext.getOrThrow().filesDir,
                             inputFilePath, CompressQuality.COMPRESS_QUALITY_HIGH)
                         launch {
                             res = result

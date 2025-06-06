@@ -12,21 +12,25 @@ import std.fs.*
 func stagePreBuild(): Int64 {
     // process before "cjpm build"
     let sourcePathArm64 = "../../../../videocompress_ffi/build/default/intermediates/cmake/default/obj/arm64-v8a/libvideocompress.so"
-    if (File.exists(sourcePathArm64)) {
-        println("Arm64存在")
-        let destPathArm64 = "../../../libs/arm64-v8a/libvideocompress.so"
-        File.copy(sourcePathArm64, destPathArm64, true)
-    } else {
-        println("Arm64不存在")
-    }
+//    if (File.exists(sourcePathArm64)) {
+//        println("Arm64存在")
+//        let destPathArm64 = "../../../libs/arm64-v8a/libvideocompress.so"
+//        File.copy(sourcePathArm64, destPathArm64, true)
+//    } else {
+//        println("Arm64不存在")
+//    }
     let sourcePathX86 = "../../../../videocompress_ffi/build/default/intermediates/cmake/default/obj/x86_64/libvideocompress.so"
-    if (File.exists(sourcePathX86)) {
-        println("X86存在")
-        let destPathX86 = "../../../libs/x86_64/libvideocompress.so"
-        File.copy(sourcePathX86, destPathX86, true)
-    } else {
-        println("X86不存在")
-    }
+//    if (File.exists(sourcePathX86)) {
+//        println("X86存在")
+//        let destPathX86 = "../../../libs/x86_64/libvideocompress.so"
+//        File.copy(sourcePathX86, destPathX86, true)
+//    } else {
+//        println("X86不存在")
+//    }
+     while (!File.exists(sourcePathArm64) || !File.exists(sourcePathX86)) {
+
+     }
+
 
     0
 }

@@ -36,7 +36,7 @@ class Compress3type {
                     let comprossor: VideoCompressor = VideoCompressor()
                     let inputFilePath: String = "/data/storage/el1/bundle/test.mp4"
                     let fut1: Future<Unit> = spawn {
-                        let result1: ?CompressorResponse = comprossor.compressVideo(globalAbilityContext.getOrThrow(),
+                        let result1: ?CompressorResponse = comprossor.compressVideo(globalAbilityContext.getOrThrow().filesDir,
                             inputFilePath, CompressQuality.COMPRESS_QUALITY_HIGH)
                         launch {
                             res1 = result1
@@ -44,7 +44,7 @@ class Compress3type {
                         }
                     }
                     let fut2: Future<Unit> = spawn {
-                        let result2: ?CompressorResponse = comprossor.compressVideo(globalAbilityContext.getOrThrow(),
+                        let result2: ?CompressorResponse = comprossor.compressVideo(globalAbilityContext.getOrThrow().filesDir,
                             inputFilePath, CompressQuality.COMPRESS_QUALITY_MEDIUM)
                         launch {
                             res2 = result2
@@ -52,7 +52,7 @@ class Compress3type {
                         }
                     }
                     let fut3: Future<Unit> = spawn {
-                        let result3: ?CompressorResponse = comprossor.compressVideo(globalAbilityContext.getOrThrow(),
+                        let result3: ?CompressorResponse = comprossor.compressVideo(globalAbilityContext.getOrThrow().filesDir,
                             inputFilePath, CompressQuality.COMPRESS_QUALITY_LOW)
                         launch {
                             res3 = result3

@@ -3,9 +3,9 @@
 </div>
 
 <p align="center">
-<img alt="" src="https://img.shields.io/badge/release-v0.0.1-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/release-v1.0.0-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/build-pass-brightgreen" style="display: inline-block;" />
-<img alt="" src="https://img.shields.io/badge/cjc-v0.53.20-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/cjc-v1.0.0-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/project-open-brightgreen" style="display: inline-block;" />
 </p>
 
@@ -169,9 +169,9 @@ class CompresstxtHigh {
 
 ## 约束与限制
 
-IDE : DevEco Studio 5.0.5 Release (5.0.13.200)
+IDE : DevEco Studio 5.1.0 Release (5.1.0.828SP1)
 
-Plugins (SDK) : DevEco Studio-Cangjie Plugin 5.0.13.200 Canary
+Plugins (SDK) : DevEco Studio-Cangjie Plugin 5.1.0.828
 
 
 ## 开源协议

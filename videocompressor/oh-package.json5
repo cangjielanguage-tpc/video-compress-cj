@@ -1,11 +1,11 @@
 {
   "name": "videocompressor",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Please describe the basic information.",
   "main": "",
   "author": "",
+  "types": "./Index.d.ets",
   "license": "Apache-2.0",
   "dependencies": {
-    "videocompress_ffi": "file:../videocompress_ffi"
   }
 }

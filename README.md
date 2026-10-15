@@ -3,15 +3,15 @@
 </div>
 
 <p align="center">
-<img alt="" src="https://img.shields.io/badge/release-v0.0.1-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/release-v1.0.1-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/build-pass-brightgreen" style="display: inline-block;" />
-<img alt="" src="https://img.shields.io/badge/cjc-v0.53.20-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/cjc-v1.1.3-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/project-open-brightgreen" style="display: inline-block;" />
 </p>
 
 ## 介绍
 
-video-compress-cj是一款高性能的视频压缩三方库
+video-compress-cj是一款高性能的视频压缩三方库，只支持真机
 
 ### 特性
 
@@ -27,7 +27,6 @@ video-compress-cj是一款高性能的视频压缩三方库
 ├── doc                                       #文档目录
 │   └── feature_api.md                        #API接口文档
 ├── videocompressor                           #源码目录 
-├── videocompress_ffi                         #C++源码目录
 ├── entry                                     #示例目录
 └── hvigor                                    #构建工具目录
 ```
@@ -82,7 +81,7 @@ video-compress-cj是一款高性能的视频压缩三方库
 ```shell
 
     1.先通过命令把代码下载下来,
-      git clone -b 具体分支名 --single-branch --recursive  https://gitcode.com/Cangjie-TPC/video-compress-cj.git
+      git clone -b 具体分支名 --single-branch  https://gitcode.com/Cangjie-TPC/video-compress-cj.git
           
     2.选择videocompressor模块,点击Build菜单,然后点击 Make Module 'videocompressor' 等待编译完成,项目则编译成功
     
@@ -99,7 +98,7 @@ a. 目标工程把依赖库作为源码引入
 > cd $工程根目录
 >mkdir third-party
 >cd  third-party
->git clone -b 具体分支名 --single-branch --recursive  https://gitcode.com/Cangjie-TPC/video-compress-cj.git
+>git clone -b 具体分支名 --single-branch  https://gitcode.com/Cangjie-TPC/video-compress-cj.git
 然后按照上面流程把video-compress-cj库正常编译通过即可
 ```
 
@@ -169,10 +168,16 @@ class CompresstxtHigh {
 
 ## 约束与限制
 
-IDE : DevEco Studio 5.0.5 Release (5.0.13.200)
+在下述版本验证通过:
 
-Plugins (SDK) : DevEco Studio-Cangjie Plugin 5.0.13.200 Canary
+| 编号 | 依赖构建工具                                       | 版本号       |
+|----|----------------------------------------------|-----------|
+| 1  | **DevEco Studio**                            | 6.1.1.280 |
+| 2  | **cjc**                                      | v1.1.3    |
+| 3  | **DevEco Studio-Cangjie Plugin 6.1.1 Beta1** | 6.1.1.280 |
+| 4  | **compatibility-sdk-6.1.1.280**              | 6.1.1.280 |
 
+视频压缩只支持真机
 
 ## 开源协议
 

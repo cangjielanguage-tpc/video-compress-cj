@@ -4,3 +4,6 @@
 /build
 /.cxx
 /.test
+**/IDL_Dependencies_List~
+**/build-script-cache
+cjpm.lock

@@ -1,9 +1,0 @@
-{
-  "module": {
-    "name": "videocompress_ffi",
-    "type": "har",
-    "deviceTypes": [
-      "default"
-    ]
-  }
-}
